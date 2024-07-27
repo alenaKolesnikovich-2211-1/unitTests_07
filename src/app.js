@@ -35,7 +35,7 @@ export const getTotal = (items = [], discount = 0) => {
   if (discount < 0) {
     throw new Error("Процент скидки не может быть отрицательным");
   }
-  if (discount >= 100) {
+  if (discount > 100) {
     throw new Error("Процент скидки не может быть больше 100");
   }
 
